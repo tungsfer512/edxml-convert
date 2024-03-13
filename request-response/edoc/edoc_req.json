@@ -1,0 +1,188 @@
+{
+    "header_messageheader_from_organid": "12334",
+    "header_messageheader_from_organizationincharge": "12334",
+    "header_messageheader_from_organname": "12334",
+    "header_messageheader_from_organadd": "12334",
+    "header_messageheader_from_email": "12334",
+    "header_messageheader_from_telephone": "12334",
+    "header_messageheader_from_fax": "12334",
+    "header_messageheader_from_website": "12334",
+    "header_messageheader_toes": [
+        {
+            "organid": "organ_info_to_1",
+            "organizationincharge": "organ_info_to_1",
+            "organname": "organ_info_to_1",
+            "organadd": "organ_info_to_1",
+            "email": "organ_info_to_1",
+            "telephone": "organ_info_to_1",
+            "fax": "organ_info_to_1",
+            "website": "organ_info_to_1"
+        },
+        {
+            "organid": "organ_info_to_2",
+            "organizationincharge": "organ_info_to_2",
+            "organname": "organ_info_to_2",
+            "organadd": "organ_info_to_2",
+            "email": "organ_info_to_2",
+            "telephone": "organ_info_to_2",
+            "fax": "organ_info_to_2",
+            "website": "organ_info_to_2"
+        }
+    ],
+    "header_messageheader_code_codenumber": "12334",
+    "header_messageheader_code_codenotation": "12334",
+    "header_messageheader_promulgationinfo_place": "12334",
+    "header_messageheader_promulgationinfo_promulgationdate": "2023/03/14 17:19:16",
+    "header_messageheader_documenttype_type": "12334",
+    "header_messageheader_documenttype_typename": "12334",
+    "header_messageheader_subject": "12334",
+    "header_messageheader_content": "12334",
+    "header_messageheader_signerinfo_competence": "12334",
+    "header_messageheader_signerinfo_position": "12334",
+    "header_messageheader_signerinfo_fullname": "12334",
+    "header_messageheader_duedate": "2023/03/14 17:19:16",
+    "header_messageheader_toplaces": [
+        "toplaces_1",
+        "toplaces_2"
+    ],
+    "header_messageheader_otherinfo_priority": "12334",
+    "header_messageheader_otherinfo_sphereofpromulgation": "12334",
+    "header_messageheader_otherinfo_typernotation": "12334",
+    "header_messageheader_otherinfo_promulgationamount": "12334",
+    "header_messageheader_otherinfo_pageamount": "12334",
+    "header_messageheader_otherinfo_appendixes": [
+        "appendixes_1",
+        "appendixes_2"
+    ],
+    "header_messageheader_responsefors": [
+        {
+            "promulgationdate": "2023/03/14 17:19:16",
+            "organid": "890",
+            "code": "890",
+            "documentid": "890"
+        },
+        {
+            "promulgationdate": "2023/03/14 17:19:16",
+            "organid": "891",
+            "code": "891",
+            "documentid": "891"
+        }
+    ],
+    "header_messageheader_steeringtype": "12334",
+    "header_messageheader_documentid": "12334",
+    "header_traceheaderlist_traceheader": [
+        {
+            "organid": "123123"
+        },
+        {
+            "organid": "123124"
+        }
+    ],
+    "header_traceheaderlist_bussiness_bussinessdoctype": "12334",
+    "header_traceheaderlist_bussiness_bussinessdocreason": "12334",
+    "header_traceheaderlist_bussiness_bussinessdocumentinfo": [
+        {
+            "documentinfo": "documentinfo",
+            "documentreceiver": "documentreceiver",
+            "receiverlist": [
+                {
+                    "receiver": [
+                        {
+                            "organid": "organid_1",
+                            "receivertype": "receivertype_1"
+                        },
+                        {
+                            "organid": "organid_2",
+                            "receivertype": "receivertype_2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "header_traceheaderlist_bussiness_documentid": "12334",
+    "header_traceheaderlist_bussiness_staffinfoes": [
+        {
+            "department": "department_1",
+            "staff": "staff_1",
+            "mobile": "mobile_1",
+            "email": "email_1"
+        },
+        {
+            "department": "department_2",
+            "staff": "staff_2",
+            "mobile": "mobile_2",
+            "email": "email_2"
+        }
+    ],
+    "header_traceheaderlist_bussiness_paper": "12334",
+    "header_traceheaderlist_bussiness_replacementinfolist_replacementinfo": [
+        [
+            {
+                "documentid": "documentid_1",
+                "organidlist": [
+                    "1",
+                    "2"
+                ]
+            },
+            {
+                "documentid": "documentid_2",
+                "organidlist": [
+                    "3",
+                    "4"
+                ]
+            }
+        ],
+        [
+            {
+                "documentid": "documentid_3",
+                "organidlist": [
+                    "5",
+                    "6"
+                ]
+            },
+            {
+                "documentid": "documentid_4",
+                "organidlist": [
+                    "7",
+                    "8"
+                ]
+            }
+        ]
+    ],
+    "header_signature_signatureinfo_canonicalizationmethod": "12334",
+    "header_signature_signatureinfo_signaturemethod": "12334",
+    "header_signature_signatureinfo_references": [
+        {
+            "digestmethod": "digestmethod",
+            "digestvalue": "digestvalue",
+            "uri": "uri",
+            "transforms": [
+                "567",
+                "678"
+            ]
+        },
+        {
+            "digestmethod": "digestmethod",
+            "digestvalue": "digestvalue",
+            "uri": "uri",
+            "transforms": [
+                "123",
+                "456"
+            ]
+        }
+    ],
+    "header_signature_signaturevalue": "12334",
+    "header_signature_keyinfo_x509data_x509subjectname": "12334",
+    "header_signature_keyinfo_x509data_x509certificate": "12334",
+    "attachments": [
+        {
+            "attachmentname": "pin_25.png",
+            "description": "description_25"
+        },
+        {
+            "attachmentname": "pin_32.png",
+            "description": "description_32"
+        }
+    ]
+}

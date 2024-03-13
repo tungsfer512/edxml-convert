@@ -1,0 +1,169 @@
+{
+    "header": {
+        "messageheader": {
+            "from": { // đơn vị gửi
+                "organid": "mã đơn vị",
+                "organizationincharge": "mã đơn vị chủ quản",
+                "organname": "tên đơn vị",
+                "organadd": "địa chỉ",
+                "email": "email",
+                "telephone": "số điện thoại",
+                "fax": "số fax",
+                "website": "địa chỉ website của đơn vị"
+            },
+            "toes": [ // đơn vị nhận
+                {
+                    "organid": "mã đơn vị",
+                    "organizationincharge": "mã đơn vị chủ quản",
+                    "organname": "tên đơn vị",
+                    "organadd": "địa chỉ",
+                    "email": "email",
+                    "telephone": "số điện thoại",
+                    "fax": "số fax",
+                    "website": "địa chỉ website của đơn vị"
+                }
+            ],
+            "code": { // số hiệu, ký hiệu văn bản
+                "codenumber": "số hiệu",
+                "codenotation": "ký hiệu"
+            },
+            "promulgationinfo": { //thông tin ban hành
+                "place": "địa điểm ban hành",
+                "promulgationdate": "ngày ban hành"
+            },
+            "documenttype": { // loại văn bản
+                "type": "mã loại văn bản",
+                "typename": "tên loại văn bản"
+            },
+            "subject": "tiêu đề, trích yếu văn bản",
+            "content": "nội dung tóm tắt văn bản",
+            "signerinfo": { // thông tin người ký văn bản
+                "competence": "quyền hạn người ký: tl, kt,...",
+                "position": "chức vụ người ký",
+                "fullname": "họ tên người ký"
+            },
+            "duedate": "hạn xử lý",
+            "toplaces": [ // nơi nhận để lưu trữ văn bản, không bao gồm đơn vị nhận chính
+                "tên cơ quan, tổ chức, đơn vị và cá nhân nhận vb",
+                ""
+            ],
+            "otherinfo": { // thông tin khác
+                "priority": "mức độ ưu tiên vb: 0-thường, 1-khẩn, 2-thượng khẩn, 3-hỏa tốc, 4-hỏa tốc hẹn giờ",
+                "sphereofpromulgation": "phạm vi lưu hành của vb",
+                "typernotation": "ký hiệu đơn vị, tổ chức or tên người soạn thảo vb",
+                "promulgationamount": "số lượng phát hành",
+                "pageamount": "số trang",
+                "appendixes": [ // danh sách phụ lục đính kèm
+                    "tên phụ lục đính kèm",
+                    "tên phụ lục đính kèm"
+                ]
+            },
+            "responsefor": { // thông tin văn bản được phản hồi
+                "organid": "mã đơn vị được phản hồi",
+                "code": "số hiệu văn bản được phản hồi",
+                "documentid": "mã văn bản được phản hồi",
+                "promulgationdate": "ngày ban hành văn bản được phản hồi"
+            },
+            "steeringtype": "loại chỉ đạo: 1-không phải chỉ đạo, 2-chỉ đạo, 3-báo cáo chỉ đạo",
+            "documentid": "mã văn bản"
+        },
+        "traceheaderlist": {
+            "traceheader": [
+                {
+                    "organid": "mã đơn vị",
+                    "timestamp": "thời gian"
+                }
+            ],
+            "bussiness": {
+                "bussinessdoctype": "loại nghiệp vụ văn bản: 0-văn bản mới;1-thu hồi;2-cập nhật;3-thay thế",
+                "bussinessdocreason": "mô tả lý do cho nghiệp vụ",
+                "bussinessdocumentinfo": {
+                    "documentinfo": "",
+                    "documentreceiver": "",
+                    "receiverlist": {
+                        "receiver": [ // cập nhật danh sách đơn vị nhận
+                            {
+                                "receivertype": "loại cập nhật đơn vị: 0 - đơn vị bị bỏ khỏi danh sách đơn vị nhận; 1 - đơn vị mới được thêm vào danh sách đơn vị nhận",
+                                "organid": "mã đơn vị cập nhật"
+                            }
+                        ]
+                    }
+                },
+                "documentid": "mã văn bản bị thu hồi, cập nhật",
+                "staffinfo": {
+                    "department": "",
+                    "staff": "",
+                    "mobile": "",
+                    "email": ""
+                },
+                "paper": "số trang",
+                "replacementinfolist": {
+                    "replacementinfo": [
+                        {
+                            "documentid": "mã văn bản bị thay thế",
+                            "organidlist": {
+                                "organid": [
+                                    "",
+                                    ""
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "signature": {
+            "signatureinfo": {
+                "canonicalizationmethod": {
+                    "algorithm": ""
+                },
+                "signaturemethod": {
+                    "algorithm": ""
+                },
+                "reference": {
+                    "uri": "",
+                    "transforms": {
+                        "transform": {
+                            "algorithm": ""
+                        }
+                    },
+                    "digestmethod": {
+                        "algorithm": ""
+                    },
+                    "digestvalue": "",
+                    "signaturevalue": "",
+                    "keyinfo": {
+                        "x509data": {
+                            "x509subjectname": "",
+                            "x509certificate": ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "body": {
+        "manifest": {
+            "references": {
+                "reference": [
+                    {
+                        "contentid": "",
+                        "contenttype": "",
+                        "description": "",
+                        "attachmentname": ""
+                    }
+                ]
+            }
+        }
+    },
+    "attachments": [
+        {
+            "attachmentname": "pin_25.png",
+            "description": "description_25"
+        },
+        {
+            "attachmentname": "pin_32.png",
+            "description": "description_32"
+        }
+    ]
+}

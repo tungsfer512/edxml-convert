@@ -1,0 +1,36 @@
+{
+    "data": {
+        "header": {
+            "status": {
+                "statuscode": "statuscode",
+                "responsefor": {
+                    "code": "responsefor_code",
+                    "organid": "responsefor_organid",
+                    "documentid": "responsefor_documentid",
+                    "promulgationdate": "2023/03/14 00:00:00"
+                },
+                "description": "description",
+                "from": {
+                    "website": "from_website",
+                    "organizationincharge": "from_organizationincharge",
+                    "organadd": "from_organadd",
+                    "organname": "from_organname",
+                    "organid": "from_organid",
+                    "telephone": "from_telephone",
+                    "fax": "from_fax",
+                    "email": "from_email"
+                },
+                "timestamp": "2024/03/12 03:41:31",
+                "staffInfo": {
+                    "mobile": "staffinfo_mobile",
+                    "staff": "staffinfo_staff",
+                    "department": "staffinfo_department",
+                    "email": "staffinfo_email"
+                }
+            }
+        }
+    },
+    "ErrorDesc": "Thanh cong",
+    "ErrorCode": "0",
+    "status": "OK"
+}

@@ -1,0 +1,20 @@
+{
+"responsefor_organid": "responsefor_organid",
+"responsefor_code": "responsefor_code",
+"responsefor_promulgationdate": "2023/03/14 17:19:16",
+"responsefor_documentid": "responsefor_documentid",
+"from_organid": "from_organid",
+"from_organizationincharge": "from_organizationincharge",
+"from_organname": "from_organname",
+"from_organadd": "from_organadd",
+"from_email": "from_email",
+"from_telephone": "from_telephone",
+"from_fax": "from_fax",
+"from_website": "from_website",
+"statuscode": "statuscode",
+"description": "description",
+"staffinfo_department": "staffinfo_department",
+"staffinfo_staff": "staffinfo_staff",
+"staffinfo_mobile": "staffinfo_mobile",
+"staffinfo_email": "staffinfo_email"
+}

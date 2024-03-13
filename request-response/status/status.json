@@ -1,0 +1,31 @@
+{
+    "header": {
+        "status": {
+            "responsefor": { // thông tin văn bản được phẩn hồi
+                "organid": "mã đơn vị gửi của văn bản được phản hồi",
+                "code": "số hiệu, ký hiệu văn bản được phản hồi",
+                "promulgationdate": "ngày ban hành của văn bản được phản hồi",
+                "documentid": "mã vắn bản được phản hồi"
+            },
+            "from": { // thông tin đơn vị phản hồi
+                "organid": "mã đơn vị phản hồi",
+                "organizationincharge": "mã đơn vị chủ quản",
+                "organname": "tên đơn vị phản hồi",
+                "organadd": "địa chỉ đơn vị phản hồi",
+                "email": "email của đơn vị phản hồi",
+                "telephone": "số điện thoại của đơn vị phản hồi",
+                "fax": "số fax của đơn vị phản hồi",
+                "website": "website của đơn vị phản hồi"
+            },
+            "statuscode": "mã để phân loại phản hồi: 01-đã đến; 02-từ chối tiếp nhận;03-đã tiếp nhận;04-đã đến, đang chờ phân công; 05-đã phân công, đang xử lý; 06-đã xử lý xong;13-thu hồi văn bản; 15-đồng ý thu hồi/cập nhật văn bản; 16-từ chối thu hồi/cập nhật văn bản",
+            "description": "mô tả, lời nhắn",
+            "timestamp": "thời gian phát hành gói tin phản hồi",
+            "staffinfo": { // thông tin đơn vị người phụ trách phản hồi
+                "department": "địa điểm làm việc",
+                "staff": "tên người phụ trách",
+                "mobile": "số điện thoại của người phụ trách",
+                "email": "email của người phụ trách"
+            }
+        }
+    }
+}
