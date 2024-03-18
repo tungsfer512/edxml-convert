@@ -164,9 +164,7 @@ public class Utils {
     public static File MULTIPART_FILE_TO_FILE(MultipartFile multipartFile) {
 
         String file_dir = FILE_DIR;
-        String[] originalFileNames = multipartFile.getOriginalFilename().split("\\.");
-        String fileExt = originalFileNames[originalFileNames.length - 1];
-        String fileName = originalFileNames[0] + "_" + UUID() + "." + fileExt;
+        String fileName = UUID() + "." + multipartFile.getOriginalFilename();
         Path filePath = Paths.get(file_dir, fileName);
         try {
             Files.write(filePath, multipartFile.getBytes());

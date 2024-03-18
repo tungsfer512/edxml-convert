@@ -1,12 +1,10 @@
 package vn.ript.api.utils;
 
-import java.io.File;
 import java.io.InputStream;
 import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.springframework.core.io.InputStreamResource;
 
 import com.vnpt.xml.base.attachment.Attachment;
 import com.vnpt.xml.base.body.Body;
@@ -400,6 +398,7 @@ public class EdXMLParser {
                 String attachment_format = attachment.getFormat();
                 String attachment_mimetype = attachment.getMimeType();
                 String attachment_name = attachment.getName();
+                String attachment_content_base64 = Utils.ENCODE_TO_BASE64(attachment.getContent());
                 attachmentJson.put("contentid", attachment_contentid);
                 attachmentJson.put("contenttype", attachment_contenttype);
                 attachmentJson.put("description", attachment_description);
@@ -407,6 +406,7 @@ public class EdXMLParser {
                 attachmentJson.put("format", attachment_format);
                 attachmentJson.put("mimetype", attachment_mimetype);
                 attachmentJson.put("name", attachment_name);
+                attachmentJson.put("content", attachment_content_base64);
                 attachmentsArray.put(attachmentJson);
             }
             jsonObject.put("attachments", attachmentsArray);
@@ -418,19 +418,4 @@ public class EdXMLParser {
         }
     }
 
-    public static InputStreamResource getAttachmentFromEdoc(InputStream inputStream , String attachment_name) {
-        try {
-            Ed ed = EdXmlParser.getInstance().parse(inputStream);
-            List<Attachment> attachments = ed.getAttachments();
-            for (Attachment attachment : attachments) {
-                if (attachment.getName().equalsIgnoreCase(attachment_name)) {
-                    return new InputStreamResource(attachment.getInputStream());
-                }
-            }
-            return null;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
 }

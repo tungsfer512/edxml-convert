@@ -2,12 +2,15 @@ package vn.ript.api.utils;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.google.common.io.Files;
 import com.vnpt.xml.base.Content;
 import com.vnpt.xml.base.attachment.Attachment;
 import com.vnpt.xml.base.header.Bussiness;
@@ -40,6 +43,8 @@ import com.vnpt.xml.ed.header.PromulgationInfo;
 import com.vnpt.xml.status.Status;
 import com.vnpt.xml.status.builder.StatusXmlBuilder;
 import com.vnpt.xml.status.header.MessageStatus;
+
+import jakarta.activation.MimetypesFileTypeMap;
 
 public class EdXMLBuild {
 
@@ -89,7 +94,8 @@ public class EdXMLBuild {
             String header_signature_signaturevalue,
             String header_signature_keyinfo_x509data_x509subjectname,
             String header_signature_keyinfo_x509data_x509certificate,
-            List<JSONObject> attachments) {
+            JSONObject attachments_metadata,
+            List<File> attachments_file) {
         try {
             Ed ed = new Ed();
             Header header = new Header();
@@ -258,16 +264,28 @@ public class EdXMLBuild {
             signature.setSignedInfo(signedInfo);
             header.setSignature(signature);
             ed.setHeader(header);
-            if (attachments != null) {
-                System.out.println("attachments: " + attachments);
-                for (JSONObject attachment : attachments) {
+            if (attachments_metadata != null && attachments_file.size() > 0) {
+                List<Attachment> attachments = new ArrayList<Attachment>();
+                for (File file : attachments_file) {
+                    String[] attachmentnamesWithUUID = file.getName().split("\\.");
+                    String[] attachmentnames = Arrays.copyOfRange(attachmentnamesWithUUID, 1,
+                            attachmentnamesWithUUID.length);
+                    String attachmentname = String.join(".", attachmentnames);
                     String contentid = Utils.UUID();
-                    String attachmentname = attachment.getString("attachmentname");
-                    String description = attachment.getString("description");
-                    Attachment att = new Attachment(contentid, attachmentname, description,
-                            new File(Utils.FILE_DIR + attachmentname));
-                    ed.addAttachment(att);
+                    JSONObject attachment_metadata = attachments_metadata.getJSONObject(attachmentname);
+                    String description = attachment_metadata.getString("description");
+                    MimetypesFileTypeMap fileTypeMap = new MimetypesFileTypeMap();
+                    String contenttype = fileTypeMap.getContentType(file);
+                    Attachment att = new Attachment();
+                    att.setContentId(contentid);
+                    att.setContent(file);
+                    att.setName(attachmentname);
+                    att.setDescription(description);
+                    att.setFormat(Files.getFileExtension(attachmentname));
+                    att.setContentType(contenttype);
+                    attachments.add(att);
                 }
+                ed.setAttachments(attachments);
             }
             Content content = EdXmlBuilder.build(ed, Utils.FILE_DIR);
 

@@ -124,7 +124,9 @@ public class StatusController {
             File file = content.getContent();
             InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
             CustomResponse<InputStreamResource> response = new CustomResponse<InputStreamResource>(200, resource);
-            return response.response_file(file.getName());
+            String filename = file.getName();
+            file.delete();
+            return response.response_file(filename);
         } catch (Exception e) {
             CustomResponse<Object> response = new CustomResponse<>(500, e);
             return response.response();
